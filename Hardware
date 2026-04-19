@@ -1,0 +1,9 @@
+Hardware Mapping & Pinouts:
+
+Using the Grove Shield v2.0, the wiring follows a modular, standardized approach. 
+
+Component         Port Type       Pin(s) Used            Function 
+
+JHD1313M3 LCD     I2C             I2C Header (SDA/SCL)   Displays "Focus Status," "Goal Time," and "Earnings." 
+
+Ultrasonic Sensor Digital         D7                     Measures proximity to detect if you are physically present at the desk. 
