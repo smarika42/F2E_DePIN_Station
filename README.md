@@ -37,30 +37,26 @@ The system monitors whether you're actually working while sitting at your desk w
 **[Watch the Demo →](https://youtu.be/9O2SoQGajC4)**
 
 
-## ⚙️ How It Works
+## How It Works
 
-┌─────────────────────────────────────────────────────────────┐
-│                    Snitch_It System Flow                    │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  🧠 THE BRAIN (Laptop/Python)                              │
-│  ├─ Captures webcam feed in real-time                       │
-│  ├─ Uses MediaPipe for skeleton/posture tracking            │
-│  ├─ Detects: slouching, head tilt, phone distraction        │
-│  └─ Sends status to Arduino via Serial                      │
-│                                                              │
-│  💪 THE BODY (Arduino/Hardware)                             │
-│  ├─ Ultrasonic sensor checks desk proximity                 │
-│  ├─ RGB LCD displays focus status & earnings                │
-│  ├─ Buzzer alerts on posture violations                     │
-│  └─ Syncs focus state with Python brain                     │
-│                                                              │
-│  💰 THE REWARD (Web3/Solana)                                │
-│  ├─ Session completed successfully?                         │
-│  ├─ Mint Solana tokens to your wallet                       │
-│  └─ Track earnings in real-time                             │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+Snitch_It System Flow
+
+THE BRAIN (Laptop/Python)
+- Captures webcam feed in real-time
+- Uses MediaPipe for skeleton/posture tracking
+- Detects: slouching, head tilt, phone distraction
+- Sends status to Arduino via Serial
+
+THE BODY (Arduino/Hardware)
+- Ultrasonic sensor checks desk proximit
+- RGB LCD displays focus status & earnings
+- Buzzer alerts on posture violations
+- Syncs focus state with Python brain 
+
+THE REWARD (Web3/Solana)
+- Session completed successfully?
+- Mint Solana tokens to your wallet      
+- Track earnings in real-time
 
 ### System Components
 
@@ -102,11 +98,9 @@ The system monitors whether you're actually working while sitting at your desk w
 | Arduino Board (MKR WiFi 1010 or compatible) | 1 | Must support Grove Shield v2.0 |
 | Grove Shield v2.0 | 1 | Modular pinout management |
 | JHD1313M1 LCD Display (16x2 RGB) | 1 | I2C connection for status display |
-| Grove Ultrasonic Sensor | 1 | Distance detection (desk proximity) |
-| Grove Buzzer | 1 | Audio feedback for alerts |
+| Ultrasonic Sensor | 1 | Distance detection (desk proximity) |
 | Laptop/PC with Webcam | 1 | Python 3.8+ for vision processing |
 | USB Cable (USB-A to Arduino) | 1 | Serial communication |
-| USB Cable (USB-A to USB-C for laptop) | 1 | Power and data transfer |
 
 ## Software Requirements
 
@@ -133,15 +127,12 @@ Using the Grove Shield v2.0, connections follow this standard pinout:
 |-----------|-----------|--------|----------|
 | JHD1313M1 LCD | I2C | I2C Header (SDA/SCL) | Displays focus status, timer, earnings |
 | Ultrasonic Sensor | Digital | D7 | Detects physical presence at desk |
-| Buzzer | Digital | D8 | Provides audio feedback on violations |
-| Status LED (Optional) | Digital | D6 | Visual indicator of focus state |
 
 ### Assembly Steps
 
 1. **Insert Grove Shield v2.0** onto your Arduino board
 2. **Connect I2C LCD** to the I2C port on the shield
 3. **Connect Ultrasonic Sensor** to Digital port D7
-4. **Connect Buzzer** to Digital port D8
 5. **Connect Arduino to laptop** via USB cable
 6. **Position ultrasonic sensor** ~1-2 feet away from your desk chair
 
@@ -336,10 +327,10 @@ pytest tests/
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support & Feedback
+## Support & Feedback
 
-- 🎬 [Watch the Demo](https://youtu.be/9O2SoQGajC4)
-- 🐛 [Report Issues](https://github.com/smarika42/Snitch_It/issues)
-- 💬 [Discussions](https://github.com/smarika42/Snitch_It/discussions)
+- [Watch the Demo](https://youtu.be/9O2SoQGajC4)
+- [Report Issues](https://github.com/smarika42/Snitch_It/issues)
+- [Discussions](https://github.com/smarika42/Snitch_It/discussions)
 
-**Made with 💪 and focus by [@smarika42](https://github.com/smarika42)**
+**Made by [@smarika42](https://github.com/smarika42)**
